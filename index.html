@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+<body>
+     <div class="container-fluid text-center p-3 bg-dark text-white header">
+        <h1 class="fs-3">Resume Builder</h1>
+                 <div class="dark-mode">
+                    <div class="dark-inner">
+                        <span><i onclick="darkMode(this)" class="fa fa-moon-o"></i></span>
+                    </div>
+                </div>
+     </div>
+        <!-- personal details -->
+        <div class="personal-details mt-3 ">
+            <div class="container-fluid mb-3 text-start text-list">
+                <p class="fs-4">Personal Details</p>
+            </div>
+            <div class="row fs-6">
+                <div class="col-sm-6">
+                    <label for="" class="form-label" >First Name</label>
+                    <input type="text" oninput="firstName(this)" autocomplete="off" class="form-control">
+                </div>
+                <div class="col-sm-6">
+                    <label for=""  class="form-label">Last Name</label>
+                    <input type="text" oninput="lastName(this)" autocomplete="off" class="form-control">
+                </div>
+            </div>
+            <div class="row mt-2 fs-6">
+                <div class="col-sm-6">
+                    <label for="" class="form-label" >Mobile No</label>
+                    <input type="tel" autocomplete="off"  oninput="phoneNumber(this)" class="form-control">
+                </div>
+                <div class="col-sm-6">
+                    <label for="" class="form-label">Email</label>
+                    <input type="email" oninput="fillMail(this)" autocomplete="off" class="form-control">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label for="" class="form-label">
+                        Address
+                    </label>
+                    <textarea name="" oninput="fillAddress(this)" id="" class="form-control"></textarea>
+                </div>
+                <div class="col-md-6">
+                    <label for="" class="form-label">
+                        Profile
+                    </label>
+                    <input type="file" onchange="fillFile(this)" name="" class="form-control bg-primary text-white" id="">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-12">
+                    <label for="" class="form-label">Current Designation</label>
+                    <input type="text" name="" class="form-control" oninput="fillCurrentRole(this)" id="">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-12">
+                    <label for="" class="form-label">Elaborate Yourself</label>
+                    <textarea class="form-control" oninput="fillAbout(this)" id=""></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- education details -->
+        <div class="education-details mt-5 ">
+            <div class="row">
+                <p class="fs-4">Education Section</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <label for="" class="form-label">Course Name</label>
+                    <input type="text" oninput="fillCourse(this,this.id)" name="course-name" id="0" class="form-control">
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label for="" class="form-label">Course University</label>
+                    <input type="text" oninput="getUniversity(this,this.id)" name="cousre-university" id="0" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <label for="" class="form-label">Course Start Date</label>
+                    <input type="date" onchange="getStartDate(this,this.id)" name="course-start-date" id="0" class="form-control">
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label for="" class="form-label">Course End Date</label>
+                    <input type="date" onchange="getEndDate(this,this.id)" name="course-end-date" id="0" class="form-control">
+                </div>
+            </div>
+            <div class="container text-end">
+                <button class="btn btn-dark" id="addMoreEducation" onclick="addMoreEducation()">+</button>
+            </div>
+        </div>
+
+        <div class="experience-details mt-3 ">
+            <div class="container">
+                <p class="fs-5">Experience Section</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="" class="form-label">Organisation</label>
+                    <input type="text" name="" oninput="fillWorkExperienceOrganisation(this,this.id)" id="0" class="form-control">
+                </div>
+                <div class="col-sm-6">
+                    <label for="" class="form-label">Designation</label>
+                    <input type="text" name="" oninput="fillWorkExperienceDesgination(this,this.id)" id="0" class="form-control">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-6">
+                    <label for="" class="form-label">Start Date</label>
+                    <input type="date" onchange="fillWorkExperienceStartDate(this,this.id)" name="" id="0" class="form-control">
+                </div>
+                <div class="col-sm-6">
+                    <div class="container">
+
+                        <label for="" class="form-label">End Date</label>
+                        <input type="date" onchange="fillWorkExperienceEndDate(this,this.id)" name="" id="0" class="form-control">
+                        <label for="" class="form-label">Present</label>
+                        <input type="checkbox" onclick="checkPresent(this,this.id)" name="" id="0" class="form-check"
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2 mb-4">
+                <div class="col-sm-12">
+                    <label for="" class="form-label">About</label>
+                    <textarea name="" id="0" oninput="fillWorkExperienceAbout(this,this.id)" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="container text-end">
+                <button class="btn btn-dark" id="addMoreWork" onclick="addMoreExperience()">+</button>
+            </div>
+        </div>
+        
+     </div>
+
+      <div class="social-links mt-5 ">
+        <div class="container">
+            <p class="fs-5">Social Media Links</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="" class="form-label">
+                    Linked In 
+                </label>
+                <input type="url" name="" oninput="fillLinkedIn(this)" id="" class="form-control">
+            </div>
+            <div class="col-sm-6">
+                <label for="" class="form-label">
+                    Personal Blog  < />
+                </label>
+                <input type="url" oninput="fillWebsite(this)" name="" id="" class="form-control">
+            </div>
+        </div>
+      </div>
+
+
+      <div class="skill-details mt-5 mb-5 form">
+        <div class="container">
+            <p class="fs-5">
+                Skills
+            </p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="" class="form-label">Personal Skills</label>
+                    <input id="skills-container" type="text" name="" class="form-control" id="0">
+                </div>
+            </div>
+        </div>
+        <div class="container text-end mt-4 ">
+            <button class="btn btn-dark" onclick="addSkills()">+</button>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="resume-container">
+        <div class="left-container">
+            <div class="photo-container">
+                <img src="./images/avatar.png" alt="profile-photo" id="profile-photo">
+            </div>
+
+            <!-- education container -->
+
+            <div class="education-container">
+                <div class="education-title">
+                    <h2>Education</h2>
+                </div>
+                <div class="education-carry">
+                    <p id="education-study-name0">enter your major</p>
+                    <p id="education-university0">Name of your university</p>
+                    <p id="education-year0">2005-2009</p>
+                </div>
+                <div class="education-carry">
+                    <p id="education-study-name1">enter your major</p>
+                    <p id="education-university1">Name of your university</p>
+                    <p id="education-year1">2005-2009</p>
+                </div>
+                <div class="education-carry">
+                    <p id="education-study-name2">enter your major</p>
+                    <p id="education-university2">Name of your university</p>
+                    <p id="education-year2">2005-2009</p>
+                </div>
+            </div>
+
+<!-- personal details -->
+            <div class="personal-details">
+                <div class="phone-details">
+                    <div class="first-field">
+
+                        <i class="fa fa-phone"></i><h2>Phone</h2>
+                    </div>
+                    <p id="phone-number">+91-6381590500</p>
+                </div>
+                <div class="email-details">
+                    <div class="first-field">
+
+                        <i class="fa fa-envelope"></i><h2>Email</h2>
+                    </div>
+                    <p id="email-id">s.thanveer7755@gmail.com</p>
+                </div>
+                <div class="website-details">
+                    <div class="first-field">
+                        <i class="fa fa-globe"></i>
+                        <h2>Website</h2>
+                    </div>
+                    <p id="website-link">https://google.com</p>
+                </div>
+                <div class="linkedin-details">
+                    <div class="first-field">
+                        <i class="fa fa-pen" style="color:white"></i>
+                        <h2>LinkedIn</h2>
+                    </div>
+                    <p id="linkedin-link">https://google.com</p>
+                </div>
+                <div class="address-details">
+                    <div class="first-field">
+                        <i class="fa fa-user"></i>
+                        <h2>Address</h2>
+                    </div>
+                    <p id="address">
+                        1st street address,<br>
+                        California
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="name-container">
+                <h2 id="person-name">
+                    <span id="first-name">Karen</span>
+                    <span id="last-name">
+                        Richards
+                    </span>
+                </h2>
+                <p id="person-designation">
+                    Professional title
+                </p>
+            </div>
+
+            <div class="about-details">
+                <div class="about-title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-description">
+                    <p id="about-person">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis impedit est corrupti eum consequatur cumque, optio enim nobis qui esse, in consequuntur minima quod accusamus neque, sunt voluptas veniam porro!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt culpa dolore debitis optio unde pariatur id tempore a fuga temporibus ipsam ducimus repudiandae, quis iusto corrupti. Maiores quidem vitae porro!
+                    </p>
+                </div>
+            </div>
+
+            <div class="work-experience-details">
+                <div class="work-experience-title">
+                    <h2>Work Experience</h2>
+                </div>
+                <div class="work-experience-inner">
+                    <p id="work-experience-year0">2012-2014</p>
+                    <div class="work-experience-right">
+                        <h2 id="work-experience-designation0">JOB POSITION HERE</h2>
+                        <p id="work-experience-organization0">Company Name / Location</p>
+                        <p id="work-experience-about0">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus in expedita temporibus, pariatur vel iste! Unde ipsam atque architecto quasi eum ipsa, deserunt vero debitis suscipit soluta vitae consectetur. Expedita.
+                        </p>
+                    </div>
+                </div>
+                <div class="work-experience-inner">
+                    <p id="work-experience-year1">2012-2014</p>
+                    <div class="work-experience-right">
+                        <h2 id="work-experience-designation1">JOB POSITION HERE</h2>
+                        <p id="work-experience-organization1">Company Name / Location</p>
+                        <p id="work-experience-about1">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus in expedita temporibus, pariatur vel iste! Unde ipsam atque architecto quasi eum ipsa, deserunt vero debitis suscipit soluta vitae consectetur. Expedita.
+                        </p>
+                    </div>
+                </div>
+                <div class="work-experience-inner">
+                    <p id="work-experience-year2">2012-2014</p>
+                    <div class="work-experience-right">
+                        <h2 id="work-experience-designation2">JOB POSITION HERE</h2>
+                        <p id="work-experience-organization2">Company Name / Location</p>
+                        <p id="work-experience-about2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus in expedita temporibus, pariatur vel iste! Unde ipsam atque architecto quasi eum ipsa, deserunt vero debitis suscipit soluta vitae consectetur. Expedita.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="software-details">
+                <div class="software-title">
+                    <h2>
+                        Software Skill
+                    </h2>
+                </div>
+                <div class="software-inner">
+                    <div class="skill">
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+     </div>
+
+     <div class="container-fluid text-center mb-5">
+        <div class="row text-center">
+          <div class="col-md-12">
+
+              <input type="button" onclick="generateResume(this)" class="btn btn-success" value="Generate Resume">
+          </div>
+        </div>
+     </div>
+
+
+
+     <script src="./app.js" defer></script>
+</body>
+</html>

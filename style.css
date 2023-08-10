@@ -1,0 +1,529 @@
+body
+{
+    min-height: 130vh;
+    transition:.4s;
+}
+
+body.darkMode 
+{
+     background-color: #001923;
+}
+body.darkMode label 
+{
+    color:white;
+}
+
+.personal-details,.education-details,.experience-details,.skill-details,.social-links
+{
+    width:60%;
+    margin:0 auto;
+    /* border:1px solid black; */
+}
+body.darkMode input 
+{
+    border:1px solid white;
+    color:white;
+    background-color: transparent;
+}
+body.darkMode textarea
+{
+    border:1px solid white;
+    color:white;
+    background-color: transparent;
+}
+
+body.darkMode input:focus,
+body.darkMode textarea:focus 
+{
+    background-color: transparent;
+    color:white;
+}
+textarea 
+{
+    resize: none;
+}
+
+.container-fluid 
+{
+    display: flex;
+    align-items: center;
+}
+.dark-mode 
+{
+    /* background-color: red; */
+    z-index:1;
+    width:100px;
+    margin-left:auto;
+    width:50px;
+    position: relative;
+    overflow: hidden;
+    /* padding:4px 0px; */
+}
+i 
+{
+    cursor: pointer;
+}
+
+p 
+{
+    font-size:1.4rem;
+}
+
+body.darkMode input[type='button']
+{
+    background-color: greenyellow;
+    color:black;
+}
+
+
+
+
+/* resume template design */
+
+
+.resume-container 
+{
+    width:70%;
+    margin:20px auto;
+    min-height:100vh;
+    max-height:max-content;
+    display: flex;
+    background-color: azure;
+}
+.left-container 
+{
+    height:100%;
+    width:200px;
+    background-color:rgb(0,0,0,0.8);
+    color:white;
+    padding:15px 0;
+}
+.left-container .photo-container 
+{
+    width:80%;
+    height:155px;
+    margin:0 auto;
+    border-radius: 50%;
+    border:5px solid white;
+}
+.photo-container img 
+{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 50%;
+    mix-blend-mode:screen;
+
+}
+
+.education-container 
+{
+    width:100%;
+    padding:1rem 0;
+}
+.education-container .education-title 
+{
+    width:90%;
+    margin-left:auto;
+    border-bottom:2px solid yellow;
+    padding:.3rem 0;
+}
+.education-title h2 
+{
+    font-size:1.2rem;
+    font-weight:600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.education-container .education-carry 
+{
+    width:80%;
+    margin-left:auto;
+    padding:.8rem 0;
+}
+.education-container p 
+{
+    font-size:.6rem;
+    width:100%;
+    padding:.2rem 0;
+    text-align: left ;
+    display:none;
+}
+.education-container p:first-child 
+{
+    font-size:.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+}
+.reference-container 
+{
+    width:100%;
+    padding:1rem 0;
+}
+.reference-container .reference-title 
+{
+    width:90%;
+    margin-left:auto;
+    border-bottom:2px solid yellow;
+    padding:.3rem 0;
+}
+.reference-title h2 
+{
+    font-size:1.2rem;
+    font-weight:600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.reference-container .reference-carry 
+{
+    width:80%;
+    margin-left:auto;
+    padding:.8rem 0;
+}
+.reference-container p 
+{
+    font-size:.6rem;
+    width:100%;
+    padding:.2rem 0;
+    text-align: left ;
+    display:none;
+}
+.reference-container p:first-child 
+{
+    font-size:.8rem;
+    font-weight:600;
+    text-transform: uppercase;
+}
+
+.personal-container 
+{
+    width:100%;
+}
+.phone-details 
+{
+    width:100%;
+    padding:.5rem 0;
+}
+.first-field 
+{
+    width:100%;
+    padding:.2rem .4rem;
+    display: flex;
+    align-items: center;
+    gap:.7rem;
+    background-color: grey;
+}
+.first-field h2 
+{
+    font-size:.8rem;
+    text-transform: capitalize;
+    font-weight:500;
+    /* letter-spacing:px; */
+
+}
+.phone-details p 
+{
+    width:80%;
+    margin-left:auto;
+    font-size:.6rem;
+    padding-top:.5rem;
+    display:none;
+}
+
+.email-details 
+{
+    width:100%;
+    padding:.5rem 0;
+}
+
+
+.email-details p 
+{
+    width:80%;
+    margin-left:auto;
+    font-size:.6rem;
+    padding-top:.5rem;
+    display:none;
+}
+
+.website-details 
+{
+    width:100%;
+    padding:.5rem 0;
+}
+
+.website-details p 
+{
+    width:80%;
+    margin-left:auto;
+    font-size:.6rem;
+    padding-top:.5rem;
+    display:none;
+}
+
+.address-details 
+{
+    width:100%;
+    padding:.5rem 0;
+}
+
+.address-details p 
+{
+    width:80%;
+    margin-left:auto;
+    font-size:.6rem;
+    padding-top:.5rem;
+    display:none;
+}
+.linkedin-details 
+{
+    width:100%;
+    padding:.5rem 0;
+}
+.linkedin-details p
+{
+    width:80%;
+    margin-left:auto;
+    font-size:.6rem;
+    padding-top:.5rem;
+    display:none;
+}
+.right-container 
+{
+    width:calc(100% - 200px);
+    /* background-color: red; */
+    padding-top:2rem;
+    padding-bottom:1rem;
+}
+.right-container .name-container 
+{
+    width:100%;
+    background-color: yellow;
+    padding:1rem 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+body.darkMode .name-container span 
+{
+    color:black;
+}
+.name-container h2 
+{
+    font-weight:500;
+}
+.name-container h2 span 
+{
+    display: none;
+}
+.name-container #first-name 
+{
+    font-weight:700;
+}
+
+.name-container p 
+{
+    font-size:.8rem;
+    font-weight:500;
+    letter-spacing: 3px;
+    display:none;
+}
+
+.about-details 
+{
+    width:88%;
+    margin:0 auto;
+    padding:1rem 0;
+}
+.about-details .about-title 
+{
+    width:100%;
+    padding:.8rem 0;
+    border-bottom: 2px solid black;
+}
+.about-title h2
+{
+    font-size:1rem;
+    font-weight:600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.about-details .about-description 
+{
+    width:100%;
+    padding:.7rem 0;
+    word-spacing: 3px;
+}
+.about-description p 
+{
+    font-size:.6rem;
+    font-weight:500;
+    display:none;
+}
+
+.work-experience-details 
+{
+    width:88%;
+    margin:0 auto;
+    min-height: 180px;
+    padding:1rem 0;
+}
+.work-experience-details .work-experience-title 
+{
+    width:100%;
+    padding:.8rem 0;
+    border-bottom: 2px solid black;
+}
+.work-experience-title h2
+{
+    font-size:1rem;
+    font-weight:600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.work-experience-details .work-experience-description 
+{
+    width:100%;
+    padding:.7rem 0;
+    word-spacing: 3px;
+}
+.work-experience-description p 
+{
+    font-size:.6rem;
+    font-weight:500;
+    display:none;
+}
+
+.work-experience-inner 
+{
+    width:100%;
+    padding:.7rem 0;
+    display: flex;
+    /* gap:3rem; */
+}
+.work-experience-inner #work-experience-year0,
+.work-experience-inner #work-experience-year1,
+.work-experience-inner #work-experience-year2
+{
+    font-size:.7rem;
+    font-weight:600;
+    letter-spacing: 1px;
+    display:none;
+}
+.work-experience-inner .work-experience-right 
+{
+        width:60%;
+        margin-left:auto;
+}
+.work-experience-right h2 
+{
+    font-size:.9rem;
+    display:none;
+}
+.work-experience-right p 
+{
+    font-size:.6rem;
+    font-weight:600;
+    padding:2px 0;
+    display:none;
+}
+.work-experience-right #work-experience-about 
+{
+    padding-top:8px;
+    font-size:.5rem;
+    font-weight:500;
+}
+
+.software-details 
+{
+    width:88%;
+    margin:0 auto;
+    padding:1rem 0;
+}
+.software-details .software-title 
+{
+    width:100%;
+    padding:.8rem 0;
+    border-bottom: 2px solid black;
+}
+.software-title h2
+{
+    font-size:1rem;
+    font-weight:600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.software-details .software-inner 
+{
+    width:100%;
+    padding:2rem 1rem;
+    
+}
+
+.skill 
+{
+    /* padding:.2rem .4rem; */
+    display: flex;
+    gap:.2rem;
+    flex-wrap:wrap;
+    /* flex-direction: column; */
+}
+.skill p 
+{
+    font-size:.7rem;
+    font-weight:600;
+    word-spacing: 3px;
+    color:white;
+}
+.skill .skill-range 
+{
+    width:120px;
+    height:4px;
+    background: rgba(128, 128, 128, 0.788);
+    display:none;
+}
+.skill-range .skill-inner-range 
+{
+    width:80%;
+    height:100%;
+    background-color: black;
+}
+
+
+
+
+@media (max-width:700px)
+{
+    .resume-container 
+    {
+        width:97%;
+    }
+    .form-container 
+    {
+        width:90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:900px) {
+    .personal-details,.education-details,.experience-details,.skill-details,.social-links
+    {
+        width:76%;
+        margin:0 auto;
+    }
+    
+}
+
+@media (max-width:700px) {
+    .personal-details,.education-details,.experience-details,.skill-details,.social-links
+    {
+        width:80%;
+    }
+    
+}
